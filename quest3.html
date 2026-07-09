@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🎵 Quest 3 🎵</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>🎷 Music Quest #3 🎺</h1>
+
+
+<div class="animals">
+🦆 🐄 🦫 🎶 🎷 🎺 💕
+</div>
+
+
+<div class="message-box">
+
+<h2>🎵 Find The Hidden Melody!</h2>
+
+<p>
+The final clue is hidden inside a song...
+</p>
+
+<p>
+The instruments are playing, but only one creates the happiest adventure sound!
+</p>
+
+<h3>
+Which instrument unlocks the next level?
+</h3>
+
+</div>
+
+
+
+<div class="buttons">
+
+
+<button onclick="correctAnswer()">
+🎷 Saxophone
+</button>
+
+
+<button onclick="wrongAnswer()">
+🥁 Drum
+</button>
+
+
+<button onclick="wrongAnswer()">
+🎸 Guitar
+</button>
+
+
+</div>
+
+
+
+<p id="result"></p>
+
+
+
+</div>
+
+
+
+<script>
+
+
+function correctAnswer(){
+
+document.getElementById("result").innerHTML =
+"🎶 Perfect! You found the hidden melody! 🎉";
+
+
+setTimeout(function(){
+
+window.location.href="game.html";
+
+},1500);
+
+
+}
+
+
+
+function wrongAnswer(){
+
+document.getElementById("result").innerHTML =
+"🎺 The band says: try again! 🎵";
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
