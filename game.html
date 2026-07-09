@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🎮 Mini Game 🎮</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+<h1>🎮 Capybara Love Game 🦫</h1>
+
+<div class="animals">
+🦆 🐄 🦫 🎶 💖
+</div>
+
+
+<div class="message-box">
+
+<h2>Catch the hearts! 💕</h2>
+
+<p>
+Help the animals collect 10 hearts to unlock your surprise!
+</p>
+
+<h2>
+Score: <span id="score">0</span>/10
+</h2>
+
+</div>
+
+
+<div id="gameArea">
+
+<button id="heart">
+💖
+</button>
+
+</div>
+
+
+<p id="message"></p>
+
+
+</div>
+
+
+
+<script>
+
+let score = 0;
+
+let heart = document.getElementById("heart");
+
+let scoreText = document.getElementById("score");
+
+let message = document.getElementById("message");
+
+
+function moveHeart(){
+
+let x = Math.random() * 250;
+let y = Math.random() * 250;
+
+heart.style.left = x + "px";
+heart.style.top = y + "px";
+
+}
+
+
+heart.onclick = function(){
+
+score++;
+
+scoreText.innerHTML = score;
+
+moveHeart();
+
+
+if(score >= 10){
+
+message.innerHTML =
+"🎉 You unlocked the final clue! 💖";
+
+
+setTimeout(function(){
+
+window.location.href="date.html";
+
+},2000);
+
+}
+
+};
+
+
+moveHeart();
+
+
+</script>
+
+
+<style>
+
+#gameArea{
+
+width:300px;
+height:300px;
+margin:auto;
+position:relative;
+background:#fdf2ff;
+border-radius:20px;
+overflow:hidden;
+
+}
+
+
+#heart{
+
+position:absolute;
+font-size:40px;
+border:none;
+background:none;
+cursor:pointer;
+
+}
+
+
+</style>
+
+
+</body>
+
+</html>
