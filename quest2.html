@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🐄 Quest 2 🦫</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h1>🐄 Capybara & Cow Quest 🦫</h1>
+
+
+<div class="animals">
+🐄 🌸 🦫 🦆 💕
+</div>
+
+
+<div class="message-box">
+
+<h2>🌿 Find The Second Clue!</h2>
+
+<p>
+A capybara and a cow are guarding the next clue...
+</p>
+
+<p>
+They ask you:
+</p>
+
+<h3>
+"Which animal duo matches our adventure best?"
+</h3>
+
+</div>
+
+
+<div class="buttons">
+
+<button onclick="correctAnswer()">
+🦆 Duck + Capybara = Best Adventure Buddies
+</button>
+
+
+<button onclick="wrongAnswer()">
+🐺 Wolf + Dragon = Too scary
+</button>
+
+
+<button onclick="wrongAnswer()">
+🐟 Fish + Shark = No land adventures
+</button>
+
+</div>
+
+
+<p id="result"></p>
+
+
+</div>
+
+
+
+<script>
+
+function correctAnswer(){
+
+document.getElementById("result").innerHTML =
+"💖 Correct! The capybara gives you the next clue!";
+
+setTimeout(function(){
+
+window.location.href="quest3.html";
+
+},1500);
+
+}
+
+
+
+function wrongAnswer(){
+
+document.getElementById("result").innerHTML =
+"🐄 Moo! That wasn't the secret answer. Try again!";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
