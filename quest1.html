@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>⛏ Quest 1 ⛏</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>⛏ Minecraft Quest #1 ⛏</h1>
+
+<div class="animals">
+🦆 🐄 🦫 🟩 🟫 🎮
+</div>
+
+<div class="message-box">
+
+<h2>💎 Find The First Clue!</h2>
+
+<p>
+A Minecraft villager gave you a mission...
+</p>
+
+<p>
+If we got stuck in a Minecraft world together,
+what would we need the most?
+</p>
+
+</div>
+
+
+<div class="buttons">
+
+<button onclick="correctAnswer()">
+🛠 Build a cozy house
+</button>
+
+<button onclick="wrongAnswer()">
+💥 Fight everything immediately
+</button>
+
+<button onclick="wrongAnswer()">
+🐄 Only collect cows
+</button>
+
+</div>
+
+
+<p id="result"></p>
+
+
+</div>
+
+
+<script>
+
+function correctAnswer(){
+
+document.getElementById("result").innerHTML =
+"✨ Correct! You found the first clue! ✨";
+
+setTimeout(function(){
+window.location.href="quest2.html";
+},1500);
+
+}
+
+
+function wrongAnswer(){
+
+document.getElementById("result").innerHTML =
+"🦆 The duck says: try again!";
+
+}
+
+</script>
+
+
+</body>
+</html>
